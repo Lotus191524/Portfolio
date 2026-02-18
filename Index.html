@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azotha Zwane | Frontend Developer Portfolio</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #1e293b;
+            --accent: #6366f1;
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --light-text: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--primary);
+            letter-spacing: -0.05em;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light-text);
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .highlight {
+            color: var(--primary);
+        }
+
+        .summary {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #000;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Projects Section */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .project-card {
+                flex-direction: row;
+            }
+            .project-image {
+                flex: 1;
+            }
+            .project-info {
+                flex: 1;
+            }
+        }
+
+        .project-image {
+            background: var(--secondary);
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-style: italic;
+            font-size: 2rem;
+            font-weight: 200;
+        }
+
+        .project-info {
+            padding: 3rem;
+        }
+
+        .tag {
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 80px 0 40px;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">AZOTHA ZWANE</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="mailto:azothazwane19@gmail.com">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="container">
+        <h1>Frontend Developer & <br><span class="highlight">Product Manager</span></h1>
+        <p class="summary">
+            [span_3](start_span)[span_4](start_span)Specialized in **React.js** and **Tailwind CSS**, I bridge the gap between technical execution and business delivery[span_3](end_span)[span_4](end_span). [span_5](start_span)[span_6](start_span)I build high-performance web applications with a focus on **MVP scoping** and **internal accountability**[span_5](end_span)[span_6](end_span).
+        </p>
+        <div class="cta-buttons">
+            <a href="mailto:azothazwane19@gmail.com" class="btn btn-primary">Get In Touch</a>
+            <a href="https://www.linkedin.com/in/azotha-zwane-53b0b92b7" class="btn" style="border: 1px solid #cbd5e1;">LinkedIn</a>
+        </div>
+    </header>
+
+    <section id="skills" class="container" style="padding: 80px 0;">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                [span_7](start_span)[span_8](start_span)[span_9](start_span)<p>React.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, and Tailwind CSS[span_7](end_span)[span_8](end_span)[span_9](end_span).</p>
+            </div>
+            <div class="skill-card">
+                <h3>Product</h3>
+                [span_10](start_span)[span_11](start_span)<p>Agile/Scrum, MVP Scoping, User Story Mapping, and Backlog Prioritization[span_10](end_span)[span_11](end_span).</p>
+            </div>
+            <div class="skill-card">
+                <h3>Operations</h3>
+                [span_12](start_span)[span_13](start_span)[span_14](start_span)<p>Git/GitHub, CI/CD Pipelines, and Project Management via Zoho Projects[span_12](end_span)[span_13](end_span)[span_14](end_span).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container" style="padding: 80px 0;">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="project-card">
+            <div class="project-image" style="background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%);">
+                ZOLESTA
+            </div>
+            <div class="project-info">
+                <span class="tag">E-Commerce</span>
+                <h3>Zolesta Fashion</h3>
+                <p style="color: var(--light-text); margin: 1rem 0;">
+                    [span_15](start_span)Developed a premium, high-performance user interface for an upper-class fashion platform, focusing on luxury branding and seamless user experience[span_15](end_span).
+                </p>
+                [span_16](start_span)<p><strong>Role:</strong> Frontend Developer[span_16](end_span).</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image" style="background: #0f172a;">
+                TRACKER
+            </div>
+            <div class="project-info">
+                <span class="tag">Internal Tooling</span>
+                <h3>Internal Project Tracker</h3>
+                <p style="color: var(--light-text); margin: 1rem 0;">
+                    [span_17](start_span)[span_18](start_span)Developed a centralized system to track project milestones, improving reporting accuracy and reducing manual status updates at Gimsoi AI[span_17](end_span)[span_18](end_span).
+                </p>
+                [span_19](start_span)[span_20](start_span)<p><strong>Role:</strong> Product & Frontend Lead[span_19](end_span)[span_20](end_span).</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Azotha Zwane</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">
+                        [span_21](start_span)[span_22](start_span)Dynamic professional leading cross-functional departments (Backend, Frontend, QA, and DevOps) to ensure seamless sprint execution[span_21](end_span)[span_22](end_span).
+                    </p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Certifications</h4>
+                    <ul style="list-style: none; color: #94a3b8; font-size: 0.85rem;">
+                        [span_23](start_span)[span_24](start_span)<li>• AI-900 Microsoft Certified[span_23](end_span)[span_24](end_span)</li>
+                        [span_25](start_span)[span_26](start_span)<li>• ISTQB Certified Tester (In Progress)[span_25](end_span)[span_26](end_span)</li>
+                        [span_27](start_span)[span_28](start_span)<li>• System Development NQF 4[span_27](end_span)[span_28](end_span)</li>
+                        [span_29](start_span)<li>• Web development Diploma - Upskillist[span_29](end_span)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Azotha Zwane. Built with HTML & CSS.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
+  
