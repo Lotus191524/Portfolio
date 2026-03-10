@@ -27,3 +27,32 @@ Frontend Engineering: Expertise in React.js, Tailwind CSS, and performance optim
 Product Management: Skilled in MVP scoping, Agile/Scrum leadership, and user story architecture.
 
 Intelligence & Tools: Microsoft AI-900 Certified, Git/GitHub Flow, and QA Testing fundamentals.
+
+⚙️ Installation & Setup
+If you would like to run this project locally:
+
+1. Clone the repository:
+   
+git clone https://github.com/lotus191524/Portfolio.git
+
+3. Navigate to the directory:
+
+cd Portfolio
+
+4. Install dependencies:
+
+npm install
+
+5.Start the development server:
+
+npm start
+
+
+Built with Reactivity & Intent — © 2026 Azotha Zwane
+
+
+
+
+ 
+
+
